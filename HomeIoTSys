@@ -7,9 +7,8 @@ int Gas_analog = 15;    //input pin for analogue gas sensor (threshold for actio
 int Gas_digital = 4;    //input pin for digital gas sensor (collecting readings)
 
 #void setup() {
-  Serial.begin(115200);
+  Serial.begin(115200);    //DHT operates on 9600 but MQ2 can operate only at 115200 so using higher baud rate
   pinMode(Gas_digital, INPUT);
-  pinMode (LED_BUILTIN, OUTPUT);
-  Serial.println(F("DHTxx test!"));
+  pinMode (LED_BUILTIN, OUTPUT);   //temporary output until actuator arm part arrives
   dht.begin();
 }
