@@ -1,7 +1,15 @@
 #include "DHT.h"
 
-#define DHTPIN 3
+#define DHTPIN 3      //input pin for temp sensor
 #define DHTTYPE DHT11
 DHT dht(DHTPIN, DHTTYPE);
-int Gas_analog = 15;    // used for ESP32
-int Gas_digital = 4;   // used for ESP32
+int Gas_analog = 15;    //input pin for analogue gas sensor (threshold for action)
+int Gas_digital = 4;    //input pin for digital gas sensor (collecting readings)
+
+#void setup() {
+  Serial.begin(115200);
+  pinMode(Gas_digital, INPUT);
+  pinMode (LED_BUILTIN, OUTPUT);
+  Serial.println(F("DHTxx test!"));
+  dht.begin();
+}
