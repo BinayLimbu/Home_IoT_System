@@ -12,3 +12,16 @@ int Gas_digital = 4;    //input pin for digital gas sensor (collecting readings)
   pinMode (LED_BUILTIN, OUTPUT);   //temporary output until actuator arm part arrives
   dht.begin();
 }
+
+void loop() {
+  //Temp sensor reading
+  float h = dht.readHumidity();
+  // Read temperature as Celsius (the default)
+  float t = dht.readTemperature();
+  // Read temperature as Fahrenheit (isFahrenheit = true)
+  float f = dht.readTemperature(true);
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(h) || isnan(t) || isnan(f)) {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
