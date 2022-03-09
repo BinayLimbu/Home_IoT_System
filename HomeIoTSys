@@ -14,7 +14,8 @@ int Gas_digital = 4;    //input pin for digital gas sensor (collecting readings)
 }
 
 void loop() {
-  //Temp sensor reading
+
+  //Temp sensor reading taken from the DHT11 library             
   float h = dht.readHumidity();
   // Read temperature as Celsius (the default)
   float t = dht.readTemperature();
