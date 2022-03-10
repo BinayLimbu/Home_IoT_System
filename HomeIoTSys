@@ -38,6 +38,7 @@ void loop() {
   Serial.print(hic);
   Serial.print(F("°C "));
   
+  //Window actions based on room temp - can use hic value instead and need to come up with an override method for gas presence to keep window open despite cold
   if (t > 15 and t < 22) {
     Serial.println("Room temperature balanced. Window closed.");
     digitalWrite(LED_BUILTIN, LOW);
