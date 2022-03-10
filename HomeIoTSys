@@ -37,3 +37,8 @@ void loop() {
   Serial.println(F("Heat index: "));   //the apparent temperature (taking into account humidity)
   Serial.print(hic);
   Serial.print(F("°C "));
+  
+  if (t > 15 and t < 22) {
+    Serial.println("Room temperature balanced. Window closed.");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
