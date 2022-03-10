@@ -42,3 +42,7 @@ void loop() {
     Serial.println("Room temperature balanced. Window closed.");
     digitalWrite(LED_BUILTIN, LOW);
   }
+  if (t > 22) {
+    Serial.println("Room too hot. Opening window.");
+    digitalWrite(LED_BUILTIN, HIGH);
+  }
