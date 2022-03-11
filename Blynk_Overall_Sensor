@@ -18,7 +18,16 @@ int Gas_analog = 15;    // used for ESP32
 int Gas_digital = 4;   // used for ESP32
 bool Gas_leak = false;
 
-
+//LED virtual pin control
+BLYNK_WRITE(V3)
+{
+  int pinValue = param.asInt(); // assigning incoming value from pin V1 to a variable
+  // You can also use:
+  // String i = param.asStr();
+  // double d = param.asDouble();
+  Serial.print("V3 Slider value is: ");
+  Serial.println(pinValue);
+}
 
 
 
