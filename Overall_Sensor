@@ -68,9 +68,11 @@ void loop() {
     Serial.print("Gas detected!   Opening window!");
     digitalWrite(LED_BUILTIN, HIGH);
     delay(4000);
+    Gas_leak = true;
   }
   else {
     Serial.println("No Gas detected.   Windows normal.");
+    Gas_leak = false;
   }
   Serial.println("");
 }
