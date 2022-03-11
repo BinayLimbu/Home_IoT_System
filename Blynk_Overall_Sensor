@@ -9,6 +9,19 @@
 #define APP_DEBUG
 #include "BlynkEdgent.h"
 
+//Sensors information
+#include "DHT.h"
+#define DHTPIN 3
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+int Gas_analog = 15;    // used for ESP32
+int Gas_digital = 4;   // used for ESP32
+bool Gas_leak = false;
+
+
+
+
+
 void setup()
 {
   Serial.begin(115200);
