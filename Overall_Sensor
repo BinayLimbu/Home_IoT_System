@@ -51,4 +51,16 @@ void loop() {
     Serial.println("Room too cold. Closing window.");
     digitalWrite(LED_BUILTIN, LOW);
   }
+    
+  //Gas sensor reading
+  int gassensorAnalog = analogRead(Gas_analog);
+  int gassensorDigital = digitalRead(Gas_digital);
+
+  Serial.print("Gas Level: ");
+  Serial.print(gassensorAnalog);
+  Serial.print("\t");
+  Serial.print("Gas Class: ");
+  Serial.print(gassensorDigital);
+  Serial.print("\t");
+  }
 }
