@@ -18,7 +18,7 @@ int Gas_analog = 15;    // used for ESP32
 int Gas_digital = 4;   // used for ESP32
 bool Gas_leak = false;
 
-//LED virtual pin control
+//LED virtual pin3 control
 BLYNK_WRITE(V3)
 {
   int pinValue = param.asInt(); // assigning incoming value from pin V1 to a variable
