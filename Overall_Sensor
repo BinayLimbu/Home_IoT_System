@@ -68,4 +68,8 @@ void loop() {
     digitalWrite(LED_BUILTIN, HIGH);
     delay(4000);
   }
+  else {
+    Serial.println("No Gas detected.   Windows normal.");
+  }
+  Serial.println("");
 }
