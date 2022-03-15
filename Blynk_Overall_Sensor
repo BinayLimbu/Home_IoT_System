@@ -29,8 +29,6 @@ BLYNK_WRITE(V3)
   Serial.println(pinValue);
 }
 
-
-
 void setup()
 {
   Serial.begin(115200);
