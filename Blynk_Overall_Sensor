@@ -60,3 +60,8 @@ void loop() {
   Serial.print(t);
   Serial.print(F ("°C "));
   Serial.print("\t");
+  
+  if (t >= 15 and t <= 22) {
+    Serial.println("Room temperature optimal. Window closed.");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
