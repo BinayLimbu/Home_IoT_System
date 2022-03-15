@@ -43,3 +43,9 @@ void setup()
 void loop() {
   BlynkEdgent.run();
 }
+
+//Temp sensor reading
+  //  temperature as Celsius 
+  float t = dht.readTemperature();
+  float h = dht.readHumidity(); //for monitoring but no effect on actuator
+  Blynk.virtualWrite(V1, h);    //virtual pin 0
