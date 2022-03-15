@@ -49,3 +49,9 @@ void loop() {
   float t = dht.readTemperature();
   float h = dht.readHumidity(); //for monitoring but no effect on actuator
   Blynk.virtualWrite(V1, h);    //virtual pin 0
+  
+  // Check if any reads failed and exit early (to try again).
+  if (isnan(t)) {
+    Serial.println(F("Failed to read from DHT sensor!"));
+    return;
+  }
