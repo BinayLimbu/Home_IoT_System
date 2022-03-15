@@ -37,6 +37,9 @@ void setup()
   delay(100);
 
   BlynkEdgent.begin();
+  pinMode(Gas_digital, INPUT);
+  pinMode (LED_BUILTIN, OUTPUT);
+  dht.begin();
 }
 
 void loop() {
