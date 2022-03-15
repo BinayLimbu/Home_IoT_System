@@ -69,3 +69,7 @@ void loop() {
     Serial.println("Room too hot. Opening window.");
     digitalWrite(LED_BUILTIN, HIGH);
   }
+  if (t < 15) {
+    Serial.println("Room too cold. Closing window.");
+    digitalWrite(LED_BUILTIN, LOW);
+  }
